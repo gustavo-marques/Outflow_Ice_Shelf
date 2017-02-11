@@ -465,6 +465,9 @@ def make_mosaic(x,y,Ocean_Depth,args):
    rg.close()
    print ('*** SUCCESS creating '+name+'.nc!')
    os.system('cp mosaic.nc grid_spec.nc')
+   print ('*** Run make_quick_mosaic ***')
+   os.system('module load fre')
+   os.system('make_quick_mosaic --input_mosaic ocean_mosaic.nc --ocean_topog ice_topog.nc')
 
 def get_profile(t,i,j,var,depth,z,args,vname):
    '''
