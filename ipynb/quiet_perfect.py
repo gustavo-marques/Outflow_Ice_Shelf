@@ -6,7 +6,7 @@ import netCDF4
 import numpy as np
 
 # plot IC
-path='/lustre/f1/unswept/Gustavo.Marques/MOM6-examples/ocean_only/outflow_ice_shelf/quiet/'
+path='/lustre/f1/unswept/Gustavo.Marques/MOM6-examples/ocean_only/outflow_ice_shelf/quiet_perfect/'
 icfile = 'MOM_IC.nc'
 pfile = 'prog.nc'
 coords = ['layer','rho','z','sigma','sigma_z']
