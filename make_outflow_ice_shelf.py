@@ -595,7 +595,7 @@ def make_ts(x,y,args):
    dsdz = 1.0/args.max_depth #
    
    for j in range(args.ny):
-      if (y[j] < args.cshelf_lenght * 0.5) and (args.tout != 9999. or args.tshelf != 9999.):
+      if (y[j] < args.cshelf_lenght) and (args.tout != 9999. or args.tshelf != 9999.):
          if args.tshelf != 9999.:
             temp3D[0,:,j,:] = args.tshelf 
             salt3D[0,:,j,:] = 1.0 
