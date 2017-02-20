@@ -52,7 +52,7 @@ for n in range(len(coords)):
    ax1 = plt.subplot(211); cs1 = plot_section(end_i, 0, xq, variable='v', eta='e',yvar='yh',clim=(-1e-3,1e-3), cmap=plt.cm.bwr)
    plt.title(coords[n] + '(initial)', fontsize=18)
    plt.tick_params(axis='x',labelbottom='off')
-   ax2 = plt.subplot(212,axisbg='gray'); cs2 = plot_section(end_o, 0, xq, variable='v', eta='e',yvar='yh', clim=(-1e-3,1e-3), cmap=plt.cm.bwr);
+   ax2 = plt.subplot(212,axisbg='gray'); cs2 = plot_section(end_o, 0, xq, variable='v', eta='e',yvar='yh', clim=(-1e-4,1e-4), cmap=plt.cm.bwr);
    plt.xlabel('y [km]',fontsize=15); plt.ylabel('depth [m]',fontsize=15)
    fig.subplots_adjust(bottom=0.2, hspace=0.01)
    cbar_ax = fig.add_axes([0.16, 0.05, 0.7, 0.05])
@@ -63,7 +63,7 @@ for n in range(len(coords)):
    ax1 = plt.subplot(211); cs1 = plot_section(end_i, -1, xq, variable='v', eta='e',yvar='yh', clim=(-1e-3,1e-3), cmap=plt.cm.bwr)
    plt.title(coords[n] + '(final)', fontsize=18)
    plt.tick_params(axis='x',labelbottom='off')
-   ax2 = plt.subplot(212,axisbg='gray'); cs2 = plot_section(end_o, -1, xq, variable='v', eta='e',yvar='yh', clim=(-1e-3,1e-3), cmap=plt.cm.bwr);
+   ax2 = plt.subplot(212,axisbg='gray'); cs2 = plot_section(end_o, -1, xq, variable='v', eta='e',yvar='yh', clim=(-1e-4,1e-4), cmap=plt.cm.bwr);
    plt.xlabel('y [km]',fontsize=15); plt.ylabel('depth [m]',fontsize=15)
    fig.subplots_adjust(bottom=0.2, hspace=0.01)
    cbar_ax = fig.add_axes([0.16, 0.05, 0.7, 0.05])
