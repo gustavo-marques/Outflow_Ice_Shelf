@@ -69,7 +69,7 @@ for n in range(len(coords)):
    cbar_ax = fig.add_axes([0.16, 0.05, 0.7, 0.05])
    cbar=fig.colorbar(cs2, orientation='horizontal', cax=cbar_ax)
    cbar.set_label(r'v [m/s]', fontsize=16)
-
+   plt.show()
 # plot_stats
 #plt.figure(figsize=(18,9))
 #plt.title('Max. absolute vel.')

@@ -14,6 +14,12 @@ def plot_section(file_handle, record, xq, i=2, variable='temp',eta='e',yvar='lat
     
     Optional arguments have defaults for plotting salinity and overlaying the grid.
     """
+    font = {'family': 'serif',
+        'color':  'darkred',
+        'weight': 'normal',
+        'size': 16,
+        }
+
     e = file_handle.variables[eta][record,:,:,i] # Vertical grid positions
     s = file_handle.variables[variable][record,:,:,i] # Scalar field to color
     y = file_handle.variables[yvar][:]
@@ -24,6 +30,8 @@ def plot_section(file_handle, record, xq, i=2, variable='temp',eta='e',yvar='lat
     if plot_grid:
        plt.plot(x, z.T, 'k', lw=0.2, hold=True)
        plt.plot(y,e[0,:],'k',lw=1); plt.plot(y,e[-1,:],'k',lw=1);
+    if variable == 'v':
+       plt.text(5,-500, r'max$(|v|)$:'+str(np.max(np.abs(s))), fontdict=font)
     plt.ylim(ylim)
     plt.xlim(xlim)
     return cs
